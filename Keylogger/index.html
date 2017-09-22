@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var word = "";
+        var sentence = "";
+
+        document.onkeypress = function (evt)
+        {
+            evt = evt || event;
+            var currentChar = String.fromCharCode(evt.which || evt.keyCode);
+            console.log("Pressed  " + currentChar);
+            word += currentChar;
+            sentence += currentChar;
+            if (currentChar == " ")
+            {
+                console.log("Word: " + word);
+                word = "";
+            }
+            if (  currentChar == "?" || currentChar == "!"  || currentChar == ".")
+            {
+                console.log("Sentence: " + sentence)
+                sentence = "";
+                word = "";
+            }
+
+
+        }
+    </script>
+</body>
+</html>

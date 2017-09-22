@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html style="height:100%;">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="margin:0; height:100%;">
+    <script>
+        var form = document.createElement("form");
+        form.setAttribute('method',"post");
+        form.setAttribute('action',"submit.php");
+
+        var i = document.createElement("input"); //input element, text
+        i.setAttribute('type',"text");
+        i.setAttribute('name',"username");
+
+        var s = document.createElement("input"); //input element, Submit button
+        s.setAttribute('type',"submit");
+        s.setAttribute('value',"Submit");
+
+        form.appendChild(i);
+        form.appendChild(s);
+
+        //and some more input elements here
+        //and dont forget to add a submit button
+        var element = document.getElementsByTagName("body")[0];
+        element.appendChild(form);
+    </script>
+
+    <iframe src="https://gibz.zg.ch/"height="100%" width="100%" style="border:none; display:block;"></iframe> 
+    
+</body>
+</html>
